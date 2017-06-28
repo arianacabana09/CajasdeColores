@@ -1,0 +1,32 @@
+$color-base: red;
+
+.cuadro{
+  height: 100px;
+  float: left;
+  width: 15%;
+  margin: 1px;
+}
+
+#uno, #dos, #tres, #cuatro, #cinco, #seis {
+  @extend .cuadro;
+}
+
+/*escala de colores*/
+#uno{
+  background-color: $color-base;
+}
+#dos{
+  background-color: lighten($color-base, 10%);
+}
+#tres{
+  background-color: darken($color-base, 10%);
+}
+#cuatro{
+  background-color: desaturate($color-base, 80%);
+}
+#cinco{
+  background-color: complement($color-base);
+}
+#seis{
+  background-color: invert($color-base);
+}
